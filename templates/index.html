@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Планер-календарь</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Планер-календарь</h1>
+        <p>Создавай задачи и получай напоминания в Telegram.</p>
+      </header>
+
+      <section class="card">
+        <h2>Новая задача</h2>
+        <form id="task-form">
+          <label>
+            Название
+            <input id="title" type="text" maxlength="120" required />
+          </label>
+          <label>
+            Описание
+            <textarea id="description" rows="3" placeholder="Необязательно"></textarea>
+          </label>
+          <label>
+            Когда напомнить
+            <input id="due_at" type="datetime-local" required />
+          </label>
+          <button type="submit">Добавить задачу</button>
+          <p id="status" class="status"></p>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Список задач</h2>
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
